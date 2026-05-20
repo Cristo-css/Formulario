@@ -139,8 +139,8 @@ function validarTelefono(valor) {
   if (valor[0] === "+") inicio = 1;
 
   var largo = valor.length - inicio;
-  if (largo < 8 || largo > 15)
-    return "El teléfono debe tener entre 8 y 15 dígitos.";
+  if (largo < 8 || largo > 11)
+    return "El teléfono debe tener entre 8 y 11 dígitos.";
 
   for (var i = inicio; i < valor.length; i++) {
     var c = valor.charCodeAt(i);
