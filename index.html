@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="formulario">
+  <h2>Registro de Usuario</h2>
+
+  <!-- cuenta -->
+  <h3>Cuenta</h3>
+
+  <div class="campo">
+    <label>Nombre de usuario</label>
+    <input type="text" id="usuario">
+    <span class="error" id="err-usuario"></span>
+  </div>
+
+  <div class="campo">
+    <label>Contraseña</label>
+    <input type="password" id="contrasena">
+    <span class="error" id="err-contrasena"></span>
+  </div>
+
+  <div class="campo">
+    <label>Confirmar contraseña</label>
+    <input type="password" id="confirmar">
+    <span class="error" id="err-confirmar"></span>
+  </div>
+
+  <!-- Datos personales -->
+  <h3>Datos Personales</h3>
+
+  <div class="campo">
+    <label>Dirección</label>
+    <input type="text" id="direccion">
+    <span class="error" id="err-direccion"></span>
+  </div>
+
+  <div class="campo">
+    <label>Comuna</label>
+    <select id="comuna">
+      <option value="">-- Seleccione una comuna --</option>
+      <option>Santiago</option>
+      <option>Providencia</option>
+      <option>Las Condes</option>
+      <option>Ñuñoa</option>
+      <option>Maipú</option>
+      <option>La Florida</option>
+      <option>Pudahuel</option>
+      <option>Recoleta</option>
+    </select>
+    <span class="error" id="err-comuna"></span>
+  </div>
+
+  <div class="campo">
+    <label>Teléfono</label>
+    <input type="tel" id="telefono" placeholder="+56912345678">
+    <span class="error" id="err-telefono"></span>
+  </div>
+
+  <div class="campo">
+    <label>Página web personal (URL)</label>
+    <input type="url" id="url" placeholder="https://mipagina.com">
+    <span class="error" id="err-url"></span>
+  </div>
+
+  <!-- aficiones -->
+  <h3>Aficiones</h3>
+
+  <div class="campo">
+    <div class="aficion-row">
+      <input type="text" id="input-aficion" placeholder="Escribe una afición">
+      <button class="btn-agregar" onclick="agregarAficion()">+ Agregar</button>
+    </div>
+    <span class="error" id="err-aficiones"></span>
+    <ul id="lista-aficiones"></ul>
+  </div>
+
+  <button class="btn-enviar" onclick="enviarFormulario()">Registrarse</button>
+  <div class="exito" id="exito">¡Registro exitoso!</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
